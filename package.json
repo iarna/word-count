@@ -1,8 +1,8 @@
 {
   "name": "@iarna/word-count",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Count words, with Unicode!  Uses Unicode 9.0.0 character classes for improved clarity of implementation.",
-  "main": "count-words.js",
+  "main": "word-count.js",
   "scripts": {
     "test": "npm run prepare && tap test",
     "prepare": "node generate-word-chars.js"
@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
   "license": "ISC",
-  "main": "word-count.js",
   "devDependencies": {
     "regenerate": "^1.3.2",
     "tap": "^8.0.1",
