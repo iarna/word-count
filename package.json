@@ -22,12 +22,6 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "regenerate": "^1.3.2",
-    "unicode-9.0.0": "^0.7.0",
-    "word-count": "^0.2.2",
-    "wordcount": "^1.1.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iarna/word-count.git"
