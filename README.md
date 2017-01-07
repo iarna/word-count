@@ -27,28 +27,28 @@ The tests make it pretty clear what it's doing:
   t.is(wordCount('now with 23 a number'), 5, 'integer')
   t.is(wordCount('now with 23.17'), 3, 'decimal')
   t.is(wordCount("emoji 😍😍 do not count"), 4, 'emoji')
-  t.is(wordCount("posessive's are one word"), 4, 'posessive')
-  t.is(wordCount('posessive’s are one word'), 4, 'posessive unicode')
+  t.is(wordCount("possessive's are one word"), 4, 'possessive')
+  t.is(wordCount('possessive’s are one word'), 4, 'possessive unicode')
   t.is(wordCount('some "quoted text" does not impact'), 6, 'quotes')
   t.is(wordCount("also 'single quotes' are ok"), 5, 'single quotes')
   t.is(wordCount("don't do contractions"), 3, 'contractions count as a single word')
-  t.is(wordCount('hyphenated words-are conisdered whole'), 4, 'hyphenated words')
-  t.is(wordCount('underbares are_too just one'), 4, 'underbars')
+  t.is(wordCount('hyphenated words-are considered whole'), 4, 'hyphenated words')
+  t.is(wordCount('underbars are_too just one'), 4, 'underbars')
   t.is(wordCount('n-dash ranges 1–3 are NOT'), 6, 'en-dash')
   t.is(wordCount('m-dash connected—bits also are not'), 6, 'em-dash')
 ```
 
 Many more naive implementations match just `\w` but that only get's you
-(some) English and even then things like posessives and, depending on how
-you look at, contractions get overcounted.
+(some) English and even then things like possessives and, depending on how
+you look at, contractions get over counted.
 
 To the best of my knowledge this should successfully count words in any
-langauge that uses word-separators.  Counting words in languages without
+language that uses word-separators.  Counting words in languages without
 word-separators is rather harder and the heuristics are language specific. 
 
 If you happen to give this a run of, say, Chinese characters, it will
 consider each group outside of punctuation to be a word, massively
-undercounting.  So yeah, use a language specific counter:
+under counting.  So yeah, use a language specific counter:
 
 For instance, for Chinese there's
 [nseg](https://www.npmjs.com/package/nseg) an implementation of
