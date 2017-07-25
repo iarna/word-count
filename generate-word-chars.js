@@ -10,6 +10,5 @@ const set = regenerate()
   .add(require('unicode-9.0.0/Word_Break/MidNum/code-points.js'))
   .add(require('unicode-9.0.0/Word_Break/MidNumLet/code-points.js'))
   .add(require('unicode-9.0.0/Word_Break/Single_Quote/code-points.js'))
-  .add(require('unicode-9.0.0/Line_Break/Hyphen/code-points.js'))
 fs.writeFileSync(path.join(__dirname, 'word-chars.js'), `'use strict'
 module.exports = /(?:${set.toString()}|[-])+/g`)
