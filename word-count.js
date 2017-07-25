@@ -2,6 +2,8 @@
 const wordChars = require('./word-chars.js')
 
 module.exports = function (str) {
-  const match = (str || '').match(wordChars)
-  return match ? match.length : 0
+  if (!str) str = ''
+  let cnt = 0
+  while (wordChars.test(str)) ++cnt
+  return cnt
 }
