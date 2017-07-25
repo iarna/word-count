@@ -16,5 +16,6 @@ test('word-count', t => {
   t.is(wordcount('underbars are_too just one'), 4, 'underbars')
   t.is(wordcount('n-dash ranges 1–3 are NOT'), 6, 'en-dash')
   t.is(wordcount('m-dash connected—bits also are not'), 6, 'em-dash')
+  t.is(wordcount('soft­hyphen'), 1, 'soft hyphen')
   t.done()
 })
