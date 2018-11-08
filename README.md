@@ -1,6 +1,6 @@
 # @iarna/word-count
 
-Count words, with Unicode!  Uses Unicode 9.0.0 character classes for improved
+Count words, with Unicode!  Uses Unicode 11.0.0 character classes for improved
 clarity of implementation.
 
 ```js
