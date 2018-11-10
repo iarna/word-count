@@ -10,5 +10,10 @@ const set = regenerate()
   .add(require('unicode-9.0.0/Word_Break/MidNum/code-points.js'))
   .add(require('unicode-9.0.0/Word_Break/MidNumLet/code-points.js'))
   .add(require('unicode-9.0.0/Word_Break/Single_Quote/code-points.js'))
+const SOFT_HYPHEN = '\\u00AD'
+const HYPHEN_MINUS = '\\u002D'
+const HYPHEN = '\\u2010'
+const NONBREAKING_HYPHEN = '\\u2011'
+
 fs.writeFileSync(path.join(__dirname, 'word-chars.js'), `'use strict'
-module.exports = /(?:${set.toString()}|\\u00AD|-(?!-))+/g`)
+module.exports = /(?:${set.toString()}|[${SOFT_HYPHEN}${HYPHEN}${NONBREAKING_HYPHEN}]|${HYPHEN_MINUS}(?!${HYPHEN_MINUS}))+/g`)

@@ -17,8 +17,12 @@ Specifically, we consider a word a run of 1 or more characters in these sets:
 * Word_Break/MidNum
 * Word_Break/MidNumLet
 * Word_Break/Single_Quote
-* Line_Break/Hyphen
+* Soft hyphens (\u00AD)
+* A singular hyphen
 
+Multiple hyphens in a row, that is `--` and `---` are considered word
+separators as they're often used as stand-ins for endashes `–` and emdashes
+`—` respectively.
 
 The tests make it pretty clear what it's doing:
 
@@ -76,3 +80,10 @@ For instance, for Chinese there's
   all it has.
 * [word-counter](https://www.npmjs.com/package/word-counter) — Splits on
   `\s`.  Has a run-time dependency on coffee-script.
+
+## FOR FUTURE REFERENCE
+
+Unicode has a [report relating to word
+boundaries](http://unicode.org/reports/tr29/#Word_Boundaries) that may be
+useful.  It's focused on determining boundaries for things like
+double-clicking and spell check, but it's definitately a related function.

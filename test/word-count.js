@@ -21,5 +21,8 @@ test('word-count', t => {
   t.is(wordcount('cheap--endash'), 2, 'cheap en-dash')
   t.is(wordcount('cheap---emdash'), 2, 'cheap em-dash')
   t.is(wordcount('soft­hyphen'), 1, 'soft hyphen')
+  t.is(wordcount('The quick (“brown”) fox can’t jump 32.3 feet, right?'), 9, 'tr29 example')
+  t.is(wordcount('true‐hyphen'), 1, 'true hyphenated words')
+  t.is(wordcount('nonbreaking‑hyphen'), 1, 'non-breaking hyphen')
   t.done()
 })
