@@ -8,8 +8,7 @@
     "prepare": "node generate-word-chars.js"
   },
   "files": [
-    "word-chars.js",
-    "word-count.js"
+    "index.js"
   ],
   "keywords": [],
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",

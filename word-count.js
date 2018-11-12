@@ -1,5 +1,5 @@
 'use strict'
-const wordChars = require('./word-chars.js')
+const wordChars = {{word-chars}}
 
 module.exports = function (str) {
   if (typeof str !== 'string') str = str == null ? '' : String(str)

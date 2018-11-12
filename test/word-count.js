@@ -1,6 +1,6 @@
 'use strict'
 const test = require('tap').test
-const wordcount = require('../word-count.js')
+const wordcount = require('../index.js')
 
 test('word-count', t => {
   t.is(wordcount('This is a test'), 4, 'plain text')

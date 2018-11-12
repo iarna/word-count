@@ -14,5 +14,6 @@ const SOFT_HYPHEN = '\\u00AD'
 const HYPHEN_MINUS = '\\u002D'
 const HYPHEN = '\\u2010'
 const NONBREAKING_HYPHEN = '\\u2011'
-fs.writeFileSync(path.join(__dirname, 'word-chars.js'), `'use strict'
-module.exports = /(?:${set.toString()}|[${SOFT_HYPHEN}${HYPHEN}${NONBREAKING_HYPHEN}]|${HYPHEN_MINUS}(?!${HYPHEN_MINUS}))+/g`)
+const matchre = `/(?:${set.toString()}|[${SOFT_HYPHEN}${HYPHEN}${NONBREAKING_HYPHEN}]|${HYPHEN_MINUS}(?!${HYPHEN_MINUS}))+/g`
+fs.writeFileSync(path.join(__dirname, 'index.js'),
+  fs.readFileSync(path.join(__dirname, 'word-count.js'), 'utf8').replace(/[{][{]word-chars[}][}]/, matchre))
