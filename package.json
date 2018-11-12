@@ -2,7 +2,7 @@
   "name": "@iarna/word-count",
   "version": "1.1.1",
   "description": "Count words, with Unicode!  Uses Unicode 9.0.0 character classes for improved clarity of implementation.",
-  "main": "word-count.js",
+  "main": "index.js",
   "scripts": {
     "test": "npm run prepare && tap test",
     "prepare": "node generate-word-chars.js"
